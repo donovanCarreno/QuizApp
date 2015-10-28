@@ -67,7 +67,7 @@ function startQuiz () {
 
 		if (questionIndex >= quiz.questions.length) {
 			updateStats(questionIndex,score);
-			quizEnd(score,quiz.questions.length);
+			quizEnd();
 		}
 		else {
 			updateStats(questionIndex,score);
@@ -95,7 +95,7 @@ function startQuiz () {
 		}
 	}
 
-	function quizEnd(totalScore,numQuestions) {
+	function quizEnd() {
 		var question = document.getElementById("question");
 		question.innerHTML = "<p>Play again?</p>";
 
